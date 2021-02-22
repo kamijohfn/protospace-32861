@@ -45,7 +45,7 @@
           <% @comments.each do |comment|%>
             <li class="comments_list">
               <%= comment.text %>&ensp;
-              <%= link_to "  (#{comment.user.name})  ", user_path(@prototype.user_id), class: :comment_user %>  <%#  詳細ページパスへ変更 comment.user.name%>  
+              <%= link_to "  (#{comment.user.name})  ", "/users/#{comment.user_id}", class: :comment_user %>  <%#  詳細ページパスへ変更 comment.user.name  user_path(@prototype.user_id)%>  
               <%#= link_to " (#{current_user.name}) ", user_path(current_user.id), class: :comment_user %>  <%#  詳細ページパスへ変更%>  <%#= これでもリンクするが・・・%>
               <% end %>
             </li>
